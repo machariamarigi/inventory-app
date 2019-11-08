@@ -1,6 +1,16 @@
-<clr-modal [clrModalOpen]="true">
+<clr-modal [clrModalOpen]="true" [clrModalClosable]="false">
   <div class="modal-title">Delete Product</div>
   <div class="modal-body">
+    <clr-alert
+      *ngIf="product?.active"
+      [clrAlertSizeSmall]="true"
+      [clrAlertClosable]="false"
+      [clrAlertType]="'warning'"
+    >
+      <clr-alert-item>
+        <span class="alert-text">This is an active device.</span>
+      </clr-alert-item>
+    </clr-alert>
     <p>Are you sure you want to delete?</p>
   </div>
   <div class="modal-footer">
