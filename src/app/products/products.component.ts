@@ -16,11 +16,22 @@ export class ProductsComponent implements OnInit {
     private productService: ProductService
   ) {}
 
+  ngOnInit() {
+  }
+
   trackById(index, item) {
     return item.id;
   }
 
-  ngOnInit() {
+  addProduct() {
+    // TODO: Implement adding a product
   }
 
+  onEdit(product: IProduct) {
+    // TODO: Implement editing a product
+  }
+
+  onDelete(product: IProduct) {
+    // TODO: Implement deleting a product
+  }
 }
