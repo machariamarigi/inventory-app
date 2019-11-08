@@ -765,6 +765,20 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@clr/angular@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.3.1.tgz#463197b84163527e6df220ee316b5033b3313ea8"
+  dependencies:
+    tslib "^1.9.0"
+
+"@clr/icons@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.3.1.tgz#4ad45bec1ad3f329c07450867427234bea321c1c"
+
+"@clr/ui@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.3.1.tgz#a091497e48f3753ba1a2fb98464796db50f21b68"
+
 "@ngtools/webpack@8.3.18":
   version "8.3.18"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.18.tgz#be0cc9c61b73119c35021d15ec44ecd59f820b54"
@@ -980,6 +994,10 @@
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
+
+"@webcomponents/custom-elements@^1.0.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@webcomponents/custom-elements/-/custom-elements-1.3.0.tgz#d0c2fb908b5f03dc1d902f780f81503b815425cb"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
