@@ -73,7 +73,9 @@
     </clr-wizard-page>
     <clr-wizard-page>
       <ng-template clrPageTitle>Expiration Info</ng-template>
-      ...
+      <clr-input-container formGroupName="expiration">
+        <input type="date" clrInput clrDate formControlName="expirationDate">
+      </clr-input-container>
     </clr-wizard-page>
 
   </clr-wizard>
