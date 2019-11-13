@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'in-product',
@@ -57,6 +57,14 @@ export class ProductComponent implements OnInit {
 
   selectDevice(device) {
     this.deviceType = device.icon;
+  }
+
+  get basicFeatures(): FormArray {
+    return this.productForm.get('basic.features') as FormArray;
+  }
+
+  addFeature() {
+    this.basicFeatures.push(this.fb.control(''));
   }
 
 }

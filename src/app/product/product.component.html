@@ -37,7 +37,39 @@
     </clr-wizard-page>
     <clr-wizard-page>
       <ng-template clrPageTitle>Basic Info</ng-template>
-      ...
+      <div>
+        <!-- Input field for product name -->
+        <clr-input-container>
+          <label for="product-name">Product Name *</label>
+          <input clrInput type="text" id="product-name" placeholder="Pixel 4" formControlName="name">
+        </clr-input-container>
+
+        <!-- Toggle switch for active -->
+        <clr-toggle-wrapper class="toggle-switch">
+          <input type="checkbox" id="active" formControlName="active" clrToggle>
+          <label for="active">Active</label>
+        </clr-toggle-wrapper>
+
+        <!-- Textarea for product decription -->
+        <clr-textarea-container>
+          <label for="description">Product Description</label>
+          <textarea 
+            clrTextarea
+            id="desctiption"
+            placeholder="Enter description here"
+            formControlName="description"
+          >
+          </textarea>
+        </clr-textarea-container>
+
+        <!-- Input FormArray for features -->
+        <label for="features" class="clr-control-label">features</label>
+        <clr-input-container formArrayName="features" *ngFor="let control of basicFeatures.controls">
+          <input type="text" [formControl]="control" placeholder="Pixel 4...">
+        </clr-input-container>
+
+        <button class="btn btn-primary" (click)="addFeature()">Add Feature</button>
+      </div>
     </clr-wizard-page>
     <clr-wizard-page>
       <ng-template clrPageTitle>Expiration Info</ng-template>
