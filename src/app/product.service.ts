@@ -100,6 +100,32 @@ export class ProductService {
 
   constructor() { }
 
+  addProduct(product) {
+    this.products = [
+      {
+        id: generateId(),
+        ...product
+      },
+      ...this.products
+    ];
+    console.log(product);
+    this.products$.next(this.products);
+  }
+
+  editProduct(id, product) {
+    const index = this.products.findIndex(p => p.id === id);
+
+    this.products = [
+      ...this.products.slice(0, index),
+      {
+        id,
+        ...product
+      },
+      ...this.products.slice(index + 1),
+    ];
+    this.products$.next(this.products);
+  }
+
   removeProduct(product: IProduct) {
     const index = this.products.indexOf(product);
 
